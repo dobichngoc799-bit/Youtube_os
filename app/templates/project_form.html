@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="panel">
+    <div class="mb-4">
+        <h3>Create New Video Project</h3>
+        <p>Start a new content production project.</p>
+    </div>
+
+    <form method="post" action="/projects/new" class="project-form">
+        <div class="mb-3">
+            <label class="form-label">Title *</label>
+            <input
+                type="text"
+                name="title"
+                class="form-control"
+                placeholder="50 Incredible Moments Caught on Camera"
+                required
+            >
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Category</label>
+            <input
+                type="text"
+                name="category"
+                class="form-control"
+                placeholder="Lucky Escape, Animal, Nature..."
+            >
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Target Length</label>
+            <input
+                type="text"
+                name="target_length"
+                class="form-control"
+                placeholder="25 minutes"
+            >
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Main Keyword</label>
+            <input
+                type="text"
+                name="keyword"
+                class="form-control"
+                placeholder="incredible moments caught on camera"
+            >
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label">Status</label>
+            <select name="status" class="form-select">
+                <option value="idea">Idea</option>
+                <option value="research">Research</option>
+                <option value="script">Script</option>
+                <option value="editing">Editing</option>
+                <option value="published">Published</option>
+            </select>
+        </div>
+
+        <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-danger">Create Project</button>
+            <a href="/projects" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
