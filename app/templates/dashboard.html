@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row g-4">
+    <div class="col-md-3">
+        <div class="stat-card">
+            <p>Total Projects</p>
+            <h2>{{ stats.total_projects }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="stat-card">
+            <p>Published</p>
+            <h2>{{ stats.published_videos }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="stat-card">
+            <p>In Progress</p>
+            <h2>{{ stats.in_progress }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="stat-card">
+            <p>Average CTR</p>
+            <h2>{{ stats.avg_ctr }}</h2>
+        </div>
+    </div>
+</div>
+
+<div class="panel mt-4">
+    <h3>Welcome to YouTube OS</h3>
+    <p>Sprint 1.1 foundation is running successfully.</p>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="panel">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+            <h3>Video Projects</h3>
+            <p>Manage all video projects here.</p>
+        </div>
+
+        <button class="btn btn-danger">+ New Project</button>
+    </div>
+
+    {% if projects %}
+        <table class="table table-dark table-hover">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Status</th>
+                <th>Category</th>
+                <th>Keyword</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for project in projects %}
+                <tr>
+                    <td>{{ project.title }}</td>
+                    <td>{{ project.status }}</td>
+                    <td>{{ project.category }}</td>
+                    <td>{{ project.keyword }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div class="empty-state">
+            <h4>No projects yet</h4>
+            <p>Create your first video project in Sprint 1.2.</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

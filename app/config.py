@@ -1,0 +1,2 @@
+APP_NAME = "YouTube OS"
+APP_VERSION = "0.1.0"
